@@ -20,7 +20,14 @@ const staticAssets = [
   './static/assets/vendor/toastr/toastr.min.css',
   './static/assets/css/main.css',
 
-  'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700'
+  'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700',
+
+  'static/assets/vendor/jquery/jquery.min.js',
+  'static/assets/vendor/bootstrap/js/bootstrap.min.js',
+  'static/assets/vendor/metisMenu/metisMenu.js',
+  'static/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js',
+  'static/assets/vendor/toastr/toastr.js',
+  'static/assets/scripts/common.js'
 ];
 
 self.addEventListener('install', async function () {
