@@ -9,7 +9,7 @@ const cacheName = 'EaseStudy-v0.3';
 // ];
 
 const staticAssets = [
-  './',
+  // './',
   './includes/app.js',
   './includes/styles.css',
   './includes/fallback.json',
@@ -55,7 +55,7 @@ async function cacheFirst(request) {
 }
 
 async function networkFirst(request) {
-  const dynamicCache = await caches.open('news-dynamic');
+  const dynamicCache = await caches.open('EaseStudy-v0.3');
   try {
     const networkResponse = await fetch(request);
     dynamicCache.put(request, networkResponse.clone());
