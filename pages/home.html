@@ -33,14 +33,14 @@
                 <label for="">Select Year</label>
 
                 <form class="form-group" action="index.html" method="post">
-                  <select id="english-year" class="form-control ml-3 mr-3" required>
+                  <select id="english-year" class="form-control ml-3 mr-3" name="select" required>
                     <optgroup label="Year">
                       <option value="2017">2017</option>
                       <option value="2018">2018</option>
                       <option value="2019">2019</option>
                     </optgroup>
                   </select>
-                  <button id="eng-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study()" subject="english">Study</button>
+                  <button id="eng-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study('english')" subject="english">Study</button>
                 </form>
                 <strong>NB: </strong>
                 Something probably <strong>important</strong> about the subject!
@@ -86,7 +86,7 @@
                         <option value="2019">2019</option>
                       </optgroup>
                     </select>
-                    <button id="maths-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study()" subject="maths">Study</button>
+                    <button id="maths-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study('maths')" subject="maths">Study</button>
                   </form>
                   <strong>NB: </strong>
                   Something probably <strong>important</strong> about the subject!
@@ -132,7 +132,7 @@
                       <option value="2019">2019</option>
                     </optgroup>
                   </select>
-                  <button id="sci-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study()" subject="science">Study</button>
+                  <button id="sci-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study('science')" subject="science">Study</button>
                 </form>
                 <strong>NB: </strong>
               Something probably <strong>important</strong> about the subject!
@@ -178,7 +178,7 @@
                       <option value="2019">2019</option>
                     </optgroup>
                   </select>
-                  <button id="soc-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study()" subject="social">Study</button>
+                  <button id="soc-btn" type="button" name="button" class="btn btn-primary btn-block study" onclick="study('social')" subject="social">Study</button>
                 </form>
                 <strong>NB: </strong>
               Something probably <strong>important</strong> about the subject!
