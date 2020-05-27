@@ -13,16 +13,21 @@ $(document).ready(function(){
 
 });
 
-function study(){
-  console.log("Study button Clicked");
-     var subject = $(this).attr("subject");
+function study(subject){
+  var subject = subject;
+  var yearID = subject+'-year';
+  var year = $('#'+yearID).val();
 
-     $.ajax({
-          url:"pages/quiz.html",
-          method:"post",
-          data:{action:subject},
-          success:function(data){
-               $('#main-content').html(data);
-          }
-     });
+  console.log("Study button Clicked");
+  // var subject = $(this).attr("subject");
+  console.log(subject);
+  console.log(year);
+   // $.ajax({
+   //      url:"pages/quiz.html",
+   //      method:"post",
+   //      data:{action:subject},
+   //      success:function(data){
+   //           $('#main-content').html(data);
+   //      }
+   // });
 };
