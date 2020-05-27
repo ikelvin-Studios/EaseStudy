@@ -22,12 +22,12 @@ function study(subject){
   // var subject = $(this).attr("subject");
   console.log(subject);
   console.log(year);
-   // $.ajax({
-   //      url:"pages/quiz.html",
-   //      method:"post",
-   //      data:{action:subject},
-   //      success:function(data){
-   //           $('#main-content').html(data);
-   //      }
-   // });
+   $.ajax({
+        url:"pages/quiz.html",
+        method:"post",
+        data:{action:subject},
+        success:function(data){
+             $('#main-content').html(data);
+        }
+   });
 };
