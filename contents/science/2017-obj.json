@@ -77,7 +77,7 @@
   {
     "type": "quiz",
     "no": "8",
-    "question": "The instrument used to measure current in an electric crcuit is the ",
+    "question": "The instrument used to measure current in an electric circuit is the ",
     "answer": "D",
     "options": {
       "A": "ammeter.",
@@ -101,7 +101,7 @@
     "type": "quiz",
     "no": "10",
     "question": "An example of a source of energy which is non-renewable is?",
-    "answer": "B",
+    "answer": "A",
     "options": {
       "A": "petroleum.",
       "B": "solar",
