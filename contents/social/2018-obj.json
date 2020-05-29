@@ -1,0 +1,125 @@
+[
+  {
+    "type": "instructions",
+    "note": "Each question is followed by four options lettered A to D. Find the correct option for each question"
+  },
+  {
+    "type": "quiz",
+    "no": "1",
+    "question": "A common feature of people associated with the same ethnic group in Ghana is",
+    "answer": "D",
+    "options": {
+      "A": "name.",
+      "B": "occupation.",
+      "C": "clothes",
+      "D": "language"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "2",
+    "question": "The main benefit of tourism in Ghana is",
+    "answer": "C",
+    "options": {
+      "A": "political stability.",
+      "B": "inter-tribal marriage.",
+      "C": "foreign exchange",
+      "D": "cultural change."
+    }
+  },{
+    "type": "quiz",
+    "no": "3",
+    "question": "The physical environment of Ghana can be protected through",
+    "answer": "A",
+    "options": {
+      "A": "recycling of waste materials.",
+      "B": "re-directing river channels.",
+      "C": "practising traditional farming.",
+      "D": "burning of industrial waste."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "4",
+    "question": "When two air masses of different temperatures meet, the result is",
+    "answer": "C",
+    "options": {
+      "A": "thunder and lightning.",
+      "B": "rain shadow zone.",
+      "C": "cyclonic rainfall.",
+      "D": "relief rainfall."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "5",
+    "question": "Where did the Akan first settle during their migration?",
+    "answer": "C",
+    "options": {
+      "A": "Dormaa Ahenkro",
+      "B": "Bono Manso",
+      "C": "Denkyira",
+      "D": "Asante Manso"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "6",
+    "question": "The period which makrs the beginning and end of adolescence is  ",
+    "answer": "D",
+    "options": {
+      "A": "12 - 19 years.",
+      "B": "10 - 19 years.",
+      "C": "10 - 14 years.",
+      "D": "15 - 19 years."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "7",
+    "question": "The social environment includes ",
+    "answer": "A",
+    "options": {
+      "A": "festivals, political parties and religious groups.",
+      "B": "festivals, churches and tourist sites.",
+      "C": "settlements, churches and rivers.",
+      "D": "settlements, festivals and political parties."
+    }
+  },{
+    "type": "quiz",
+    "no": "8",
+    "question": "An effect of land degradation is ",
+    "answer": "D",
+    "options": {
+      "A": "bad farming practises.",
+      "B": "excessive quarrying.",
+      "C": "improper layouts.",
+      "D": "loss of soil fertility."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "9",
+    "question": "An advantage of chastity to the adolescent is?",
+    "answer": "B",
+    "options": {
+      "A": "avoiding contracting typhoid fever.",
+      "B": "gaining approval from adults",
+      "C": "knowing blood group easily.",
+      "D": "getting the best school to attend."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "10",
+    "question": "People who visit places of interest to enjoy the facilities are called",
+    "answer": "C",
+    "options": {
+      "A": "experts.",
+      "B": "travellers.",
+      "C": "tourists.",
+      "D": "socialists."
+    }
+
+  }
+]
