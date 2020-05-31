@@ -21,6 +21,8 @@ function study(subject){
   var yearID = subject+'-year';
   var year = $('#'+yearID).val();
   var subjectName = subject;
+  var objectiveSide = '';
+  var writtenSide = '';
   var subjectNotice = "let's solve the awesome quiz below.";
   var objectivesInstructions = "Choose from the multi-choice options";
   var writtenInstructions = "Solve This At Your Own Pace";
@@ -47,14 +49,18 @@ function study(subject){
              $('#main-content').html(data);
              $('#subject-header').html(subjectName+' - '+year);
              $('#objectives-instructions').html(objectivesInstructions);
-             fetchJSON('contents/'+subject+'/'+year+'-obj.json');
+             fetchJSON('contents/'+subject+'/'+year+'-', 'obj.json');
+             fetchJSON('contents/'+subject+'/'+year+'-', 'written.json');
+
 
         }
    });
 };
 
-function fetchJSON(link) {
-  var link = link;
+function fetchJSON(linkHead, file) {
+  var linkHead = linkHead;
+  var file = file;
+  var link = linkHead+file;
   var ourRequest = new XMLHttpRequest();
   ourRequest.open('GET', link);
   ourRequest.onload = function(){
@@ -84,24 +90,31 @@ function renderHTML(data) {
         "mark" : 0
       };
       objSet.push(objObject);
-      console.log(objSet);
+      //console.log(objSet);
 
       htmlString += '<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#main-area" href="#collapse'+data[i].no+'" class="collapsed">#'+countNo+'. '+data[i].question+' <i class="fa fa-angle-down right icon-collapsed"><span class="text-primary">Choose:</span></i><i class="fa fa-angle-up right icon-expanded"><span class="text-primary"></span></i><h5 class="text-primary">Choice:<span id="choice-q'+data[i].no+'"></span></h5></a></h4></div><div id="collapse'+data[i].no+'" class="panel-collapse collapse"><div class="panel-body"><form class=""><label><input type="radio" name="obj-q'+data[i].no+'" value="A" onclick="choose(\'A\', '+countNo+')">A. '+data[i].options.A+' </label><br/><label><input type="radio" name="obj-q'+data[i].no+'" value="B" onclick="choose(\'B\', '+countNo+')">B. '+data[i].options.B+' </label><br/><label><input type="radio" name="obj-q'+data[i].no+'" value="C" onclick="choose(\'C\', '+countNo+')">C. '+data[i].options.C+' </label><br/><label><input type="radio" name="obj-q'+data[i].no+'" value="D" onclick="choose(\'D\', '+countNo+')">D. '+data[i].options.D+' </label>'+optionE+'</form></div></div></div>';
 
       countNo++;
     } else if(data[i].type == 'instructions'){
-      htmlString += '<p>'+data[i].note+'</p><br/>';
+      htmlString += '<br/><p>'+data[i].note+'</p><br/>';
+    } else if(data[i].type == 'essay'){
+        htmlString += '<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title">#'+countNo+'. '+data[i].problem+'</h4></div></div>';
+        countNo++;
+    } else if(data[i].type == 'title'){
+      htmlString += '<br/><center><h3><b>'+data[i].note+'<b></h3></center><br/>';
     }
 
 
   }
 
   // TODO: View AssessMent Button
-
-
+  htmlString += '<div class="margin-bottom-30"></div>';
+  // return htmlString;
   // console.log($('#main-area'));
   // TODO:  $('#main-area').appendTo(htmlString);
-  $('#main-area').html(htmlString);
+  // $('#main-area').html(htmlString);
+
+  $(htmlString).appendTo('#main-area')
 }
 
 function choose(choice, num){
