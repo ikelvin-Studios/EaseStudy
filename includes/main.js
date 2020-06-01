@@ -1,7 +1,18 @@
 var objSet = [];
 
+var studentName = '';
+var recordList = [];
+var mode = "interactive";
+
+var subjectName = '';
+var subjectYear = '';
+
 $(document).ready(function(){
  // var main = $(this).attr("main-content");
+ // Show the Modal on load
+checkAccount();
+activateMode();
+console.log("What is mode again: "+mode);
  var upcount = 0;
 
  console.log("homepage is active");
