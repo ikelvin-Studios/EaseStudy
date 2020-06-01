@@ -1,0 +1,124 @@
+[
+  {
+    "type": "instructions",
+    "note": "In each of the following sentences, there is a word underlined and one gap. From the list of word, lettered A to D, choose the word that is most nearly opposite in meaning to the underlined word and that will, at the same time. correctly fill the gap in the sentence."
+  },
+  {
+    "type": "quiz",
+    "no": "1",
+    "question": "The <u>wilting</u> plants were ........... by the recent rains.",
+    "answer": "C",
+    "options": {
+      "A": "destroyed. ",
+      "B": "cleared. ",
+      "C": "revived. ",
+      "D": "drowned. "
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "2",
+    "question": "The <u>tranquility</u> of the rural areas contrasts with the .......... in the cities.",
+    "answer": "D",
+    "options": {
+      "A": "pollution",
+      "B": "panic",
+      "C": "unease",
+      "D": "noise"
+    }
+  },{
+    "type": "quiz",
+    "no": "3",
+    "question": "That <u>greedy</u> man took advantage of the woman's ............. .",
+    "answer": "B",
+    "options": {
+      "A": "naivety",
+      "B": "generosity",
+      "C": "calmness",
+      "D": "vulnerability"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "4",
+    "question": "While the children were <u>agitated</u> by the news, their parents were very ........ . ",
+    "answer": "C",
+    "options": {
+      "A": " indifferent.",
+      "B": "happy.",
+      "C": "composed.",
+      "D": "satisfied"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "5",
+    "question": "There will not be any more food <u>shortage</u> after the ....... harvest.",
+    "answer": "C",
+    "options": {
+      "A": "vast",
+      "B": "satisfactory",
+      "C": "bumper",
+      "D": "average"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "6",
+    "question": "Do not <u>scatter</u> the books on the table, ......... them neatly on the sheleves.",
+    "answer": "C",
+    "options": {
+      "A": "pack",
+      "B": "keep",
+      "C": "arrange",
+      "D": "engage"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "7",
+    "question": " The manager will <u>lay off</u> the experienced staff and ....... ones.",
+    "answer": "B",
+    "options": {
+      "A": "promote",
+      "B": "accept",
+      "C": "recommend",
+      "D": "engage"
+    }
+  },{
+    "type": "quiz",
+    "no": "8",
+    "question": "The chief executive officer is <u>strict</u> with his staff, while his deputy is ........... ",
+    "answer": "C",
+    "options": {
+      "A": "co-operative.",
+      "B": "nice.",
+      "C": "lax.",
+      "D": "sympathetic."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "9",
+    "question": "Do not <u>indulge</u> in this malpractise anymore, ......... from it.",
+    "answer": "C",
+    "options": {
+      "A": "withdraw",
+      "B": "depart",
+      "C": "desist",
+      "D": "abstain"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "10",
+    "question": "Rather than ......... the issues, his comments <u>confused</u> the audience the more.",
+    "answer": "B",
+    "options": {
+      "A": "resolve",
+      "B": "clarify",
+      "C": "clear",
+      "D": "solve"
+    }
+  }
+]

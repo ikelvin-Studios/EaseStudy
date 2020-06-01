@@ -1,0 +1,125 @@
+[
+  {
+    "type": "instructions",
+    "note": "Each question is followed by four options lettered A to D. Find the correct option for each question"
+  },
+  {
+    "type": "quiz",
+    "no": "1",
+    "question": "In a class of 39 students, 25 offer Fante and 19 offer Twi. 5 students do not offer any of the two languages. How many students offer only twi?",
+    "answer": "C",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "9"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "2",
+    "question": "Mary and Charity entered into a business partnership and agreed to share their profit in the ration 5:4 respectively. If Mary received GHC5,000.00 less than Charity, jow much profit did they make?",
+    "answer": "D",
+    "options": {
+      "A": "GHC30,000.00",
+      "B": "GHC35,000.00",
+      "C": "GHC40,000.00",
+      "D": "GHC45,000.00"
+    }
+  },{
+    "type": "quiz",
+    "no": "3",
+    "question": "y varies inversely as the square of x. When x = 3, y = 100. Find the value of x when y = 25.",
+    "answer": "B",
+    "options": {
+      "A": "x = 30",
+      "B": "x = 12",
+      "C": "x = 6",
+      "D": "x = 5"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "4",
+    "question": "A chord of a circle with radius 5cm subtends an angle of 70 at the centre. Find, correct to one decimal place, the length of the chord.",
+    "answer": "C",
+    "options": {
+      "A": "8.2cm",
+      "B": "5.7cm",
+      "C": "4.1cm",
+      "D": "2.9cm"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "5",
+    "question": "Find the truth set of the equation: (x - 2)2 + 3 = (x + 1)2 -6",
+    "answer": "C",
+    "options": {
+      "A": "{-2}",
+      "B": "{-1}",
+      "C": "{1}",
+      "D": "{2}"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "6",
+    "question": "A pyramid with a square base has a volume of 1,400cm3. If a side of the base is 10cm long, find the height of the pyramid.",
+    "answer": "C",
+    "options": {
+      "A": "70cm",
+      "B": "42cm",
+      "C": "21cm",
+      "D": "7cm"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "7",
+    "question": "Whic of the following about parrallelograms are true?",
+    "answer": "B",
+    "options": {
+      "A": "Opposite angles are supplementary.",
+      "B": "Opposite angles are complementary.",
+      "C": "Opposite angles are equal.",
+      "D": "Opposite angles are reflex angles."
+    }
+  },{
+    "type": "quiz",
+    "no": "8",
+    "question": "Calculate the distance between points (3, -2) and (8, 10) ",
+    "answer": "C",
+    "options": {
+      "A": "12 units.",
+      "B": "13 units.",
+      "C": "14 units.",
+      "D": "15 units."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "9",
+    "question": "Express the bearing of 312 in compass direction form.",
+    "answer": "C",
+    "options": {
+      "A": "S 48 W",
+      "B": "N 48 W",
+      "C": "S 48 E",
+      "D": "N 48 E"
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "10",
+    "question": "An old man goes for a walk every 6 days. If he went for a walk on Wednesday, when will he go for his next walk? ",
+    "answer": "B",
+    "options": {
+      "A": "Monday",
+      "B": "Tuesday",
+      "C": "Wednesday",
+      "D": "Thursday"
+    }
+
+  }
+]
