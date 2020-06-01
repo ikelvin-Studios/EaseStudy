@@ -1,4 +1,4 @@
-const applicationVersion = 'EaseStudy-v1.0.3'
+const applicationVersion = 'EaseStudy-v1.0.4'
 const cacheName = applicationVersion;
 
 const staticAssets = [
