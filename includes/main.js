@@ -11,6 +11,10 @@ var quizDate = '';
 var fromTime = '';
 var toTime = '';
 
+var subjectNotice = "let's solve the awesome quiz below.";
+var objectivesInstructions = "Choose from the multi-choice options";
+var writtenInstructions = "Solve This At Your Own Pace";
+
 $(document).ready(function(){
  // var main = $(this).attr("main-content");
  // Show the Modal on load
@@ -37,9 +41,7 @@ function study(subject){
   var year = $('#'+yearID).val();
   subjectName = subject;
   subjectYear = year;
-  var subjectNotice = "let's solve the awesome quiz below.";
-  var objectivesInstructions = "Choose from the multi-choice options";
-  var writtenInstructions = "Solve This At Your Own Pace";
+
   if (subject=='english') {
     subjectName = 'English Language';
   } else if(subject=='maths') {
@@ -68,7 +70,11 @@ function study(subject){
              testDate = new Date();
              var realMonth = testDate.getMonth()+1;
              quizDate = testDate.getFullYear()+'/'+realMonth+'/'+testDate.getDate();
-             fromTime =testDate.getHours()+':'+testDate.getMinutes();
+             fromTime = testDate.getHours()+':'+testDate.getMinutes();
+
+             var sideAssessmentView = '<h2 style="font-size: 16px; margin-bottom: 15px; font-weight: 700;">'+subjectName+' '+subjectYear+'</h2><a class="btn btn-primary" onclick="viewAssessment()" data-toggle="modal" data-target="#assessModal">VIEW ASSESSMENT</a>';
+
+           $("#Side-Assesment").html(sideAssessmentView);
              // quizDate = new Date('yr');
 
         }
@@ -254,6 +260,7 @@ function checkMode(){
 
 function activateMode(){
   console.log("Mode Activation Began");
+  showRecordView()
   mode = checkMode();
   console.log("The Mode is:"+mode);
   if (mode == "interactive") {
@@ -325,5 +332,17 @@ function saveRecords(){
   var newRecordList = JSON.stringify(recordList)
   console.log(newRecordList);
   setCookie("recordList", newRecordList, 1095);
+  showRecordView();
+}
+
+function showRecordView(){
+  var count = recordList.length;
+  var listItems = '<li class="header"><strong>You have <span id="assessment-count"> '+count+' </span> Assessment Records</strong></li>';
+  // $("#assessment-count").html(count);
+  for (var i = 0; i < count; i++) {
+    listItems += '<li><a href="#"><div class="media"><div class="media-left"><i class="fa fa-fw fa-flag-checkered text-muted"></i></div><div class="media-body"><p class="text"><strong><span>'+recordList[i].subjectName+'</span></strong> <span>'+recordList[i].subjectYear+' on '+recordList[i].date+' '+recordList[i].fromTime+' - '+recordList[i].toTime+'</span></p><span class="timestamp">Score: '+recordList[i].score+' out of '+recordList[i].total+'</span></div></div></a></li>';
+  }
+  listItems += '<li class="footer"><a onclick="resetRecords()" class="more">Clear Records</a></li>';
+  $("#records-view").html(listItems);
 
 }
