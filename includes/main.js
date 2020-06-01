@@ -16,7 +16,7 @@ var objectivesInstructions = "Choose from the multi-choice options";
 var writtenInstructions = "Solve This At Your Own Pace";
 
 $(document).ready(function(){
- // var main = $(this).attr("main-content");
+
  // Show the Modal on load
 checkAccount();
 activateMode();
