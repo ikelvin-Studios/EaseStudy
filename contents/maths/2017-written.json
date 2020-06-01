@@ -1,0 +1,12 @@
+[
+  {
+    "type": "instructions",
+    "note": "Solve These At Your Own Pace"
+  },
+  {
+    "type": "essay",
+    "no": "2",
+    "problem": "Using a ruler and a pair of compasses only, <br/> a)  (i) construct a triangle ABC such that |AB| = 8cm, angle ABC = 60° and |BC| = 8cm.  <br/> (ii)  What type of triangle is triangle ABC? <br/> (b)  construct the bisector of angle BAC to meet |BC| at D. Measure |AD|.  <br/> (c)  construct the perpendicular bisector of |BA| to meet |AD| at O. <br/> (d)  Using O as centre and radius OD, draw a circle to touch the three sides of the triangle. "
+  },
+  
+]

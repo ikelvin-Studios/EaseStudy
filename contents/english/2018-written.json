@@ -1,0 +1,25 @@
+[
+  {
+    "type": "instructions",
+    "note": "Solve These At Your Own Pace"
+  },
+  {
+    "type": "instructions",
+    "note": "Answer <strong>one</strong> question </strong>only<strong> from this part. <br/> Your composition should be about <strong>250 words</strong> long."
+  },
+  {
+    "type": "essay",
+    "no": "1",
+    "problem": "Write a letter to your headteacher discussing two games that should be encouraged among the students in your school."
+  },
+  {
+    "type": "essay",
+    "no": "2",
+    "problem": "Write an article for publication in your school magazine on why every student should be computer-literate."
+  },
+  {
+    "type": "essay",
+    "no": "3",
+    "problem": "Write an interesting story which ends with the words, it pays to be kind to strangers."
+  }
+]

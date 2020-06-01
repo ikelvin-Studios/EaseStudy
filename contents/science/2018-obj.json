@@ -1,0 +1,125 @@
+[
+  {
+    "type": "instructions",
+    "note": "Each question is followed by four options lettered A to D. Find the correct option for each question"
+  },
+  {
+    "type": "quiz",
+    "no": "1",
+    "question": "The pH level of water is ",
+    "answer": "A",
+    "options": {
+      "A": "2.",
+      "B": "5.",
+      "C": "7.",
+      "D": "14."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "2",
+    "question": "One characteristic feature of Kingdom Animalia is the possession of  ",
+    "answer": "B",
+    "options": {
+      "A": "celluluse cell walls.",
+      "B": "nervous system.",
+      "C": "starch granules",
+      "D": "chlorophyll."
+    }
+  },{
+    "type": "quiz",
+    "no": "3",
+    "question": "Which of the following statements explains the occurence of large number of carbon compounds? Carbon",
+    "answer": "C",
+    "options": {
+      "A": "is present in all living things.",
+      "B": "atom is tetravelent element.",
+      "C": "compounds dissolve readily in organic solvents.",
+      "D": "compounds burn readily in air."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "4",
+    "question": "The instrument used to measure the diameter of a thin wire is ",
+    "answer": "C",
+    "options": {
+      "A": "thread and rule.",
+      "B": "engineer's callipers.",
+      "C": "microscope screw gauge.",
+      "D": "spherometer."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "5",
+    "question": "A species X has 16 protons, 17 neutrons and 18 elecrons. X must be ",
+    "answer": "C",
+    "options": {
+      "A": "neutral atom equal of a metal.",
+      "B": "a cation of two positive charges.",
+      "C": "an anion of two negative charges.",
+      "D": "an anion of one negative charge."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "6",
+    "question": "The main effect of diseases on crops is  ",
+    "answer": "D",
+    "options": {
+      "A": "reduction in photosynthesis.",
+      "B": "inability of roots to absorb water.",
+      "C": "shortening of internodes.",
+      "D": "reduction of the yield of produce."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "11",
+    "question": "Respiration is essential to life forms since ",
+    "answer": "D",
+    "options": {
+      "A": "food is oxidised.",
+      "B": "oxygen is used up.",
+      "C": "waste products are eliminated.",
+      "D": "energy is released."
+    }
+  },{
+    "type": "quiz",
+    "no": "13",
+    "question": "A pulley system is used to lift a load of 300N. If the effort used is 150N, determine the mechanical advantage of the system.",
+    "answer": "B",
+    "options": {
+      "A": "0.5.",
+      "B": "2.0.",
+      "C": "150.",
+      "D": "450."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "14",
+    "question": "The easiest method of fertilizer application is",
+    "answer": "C",
+    "options": {
+      "A": "band application.",
+      "B": "broadcasting.",
+      "C": "ring application.",
+      "D": "spraying."
+    }
+  },
+  {
+    "type": "quiz",
+    "no": "9",
+    "question": "An element which can be considered as a semi-metal is",
+    "answer": "C",
+    "options": {
+      "A": "argon.",
+      "B": "carbon.",
+      "C": "silicon.",
+      "D": "sodium."
+    }
+
+  }
+]
