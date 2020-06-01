@@ -153,14 +153,131 @@
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN CONTENT -->
 		<div id="main-content">
-		<!-- homepage -->
 
-		<!-- quiz page -->
+			<div id="main-contentArea" class="">
+				<!-- homepage -->
+				<img src="static/assets/img/lazyload.gif" alt="Loading..." class="img img-responsive img-fluid"/>
+				<!-- quiz page -->
+			</div>
+			<!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#About-modal">Large modal</button>
+			<br>
+			<br> -->
+			<div id="About-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-md" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">About EaseStudy</h4>
+						</div>
+						<div class="modal-body">
+							<img src="static/assets/img/about.gif" alt="about" class="img img-responsive img-fluid"/>
+							<div class="navbar-brand">
+								<a href="./" class="text-larger">EaseStudy
+			          </a>
+							</div>
+							<p>is an offline-first Progressive Web Application take on as a project by Benjamin Owusu and Edmund Oakley Inkumsah. The two sought to provide an app which makes prepping for WASSCE as easy as it can be. You'll find out that it's quite unique from other websites and apps out there.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times-circle"></i> Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="startupModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<!-- <div class="modal-header">
+						</div> -->
+						<div class="modal-body">
+							<center><img src="static/assets/img/welcome1.jpg" alt="welcome" class="img img-responsive img-fluid"/></center>
+							<h2>Welcome to EaseStudy. I'm here to help making studying for WASSCE as easy as possible. <span class="text-larger text-primary"> Let's get started</span> </h2>
+							<div class="margin-bottom-30"></div>
+							<div class="margin-bottom-30"></div>
+
+							<img src="static/assets/img/loader.gif" alt="ready" class="img img-responsive" style="height:15%;width:15%"/>
+
+							<form class="search-form help-search-form">
+								<input id="startupInput" name="studentInput" class="form-control" placeholder="How can I call You?" type="text">
+								<button type="button" class="btn btn-default"><i class="fa fa-fw fa-user"></i></button>
+								<label for="studentName">NB: Needed for Identifying you and your records. <br> Hence, personalizing your experience on EaseStudy</label>
+							</form>
+						</div>
+						<div class="modal-footer">
+
+							<!-- <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times-circle"></i> Close</button> -->
+							<button type="button" onclick="registerAccount()" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-check-circle"></i> Get Started</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="assessModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-md" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">Assesment Sheet</h4>
+						</div>
+						<div class="modal-body">
+							<img src="static/assets/img/assess-loader.gif" alt="about" class="img img-responsive img-fluid"/>
+							<div class="section-heading">
+						    <h3 class="heading"><i class="fa fa-square"></i> Subject Name Year</h3>
+						    <a href="#" class="right">Your choices and results are as follows.</a>
+						    <!-- <h1 class="page-title">Select Subject</h1> -->
+						  </div>
+							<div class="section-body">
+						   <h1 class="page-title text-primary"> <strong>Score:</strong>  10 out of <strong>10</strong></h1>
+
+							 <div class="row">
+							   <div class="col-md-3 col-sm-6">
+							     <h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+							   </div>
+								 <div class="col-md-3 col-sm-6">
+									<h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+								</div>
+								<div class="col-md-3 col-sm-6">
+								 <h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+							 </div>
+							 <div class="col-md-3 col-sm-6">
+								 <h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+							 </div>
+							 <div class="col-md-3 col-sm-6">
+								<h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+							</div>
+							<div class="col-md-3 col-sm-6">
+							 <h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+						 </div>
+						 <div class="col-md-3 col-sm-6">
+							 <h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+						 </div>
+						 <div class="col-md-3 col-sm-6">
+							<h4><i class="fa fa-hashtag"></i>1. B  | Correct Choice</h4>
+						</div>
+							 </div>
+						  </div>
+							<p>is an offline-first Progressive Web Application take on as a project by Benjamin Owusu and Edmund Oakley Inkumsah. The two sought to provide an app which makes prepping for WASSCE as easy as it can be. You'll find out that it's quite unique from other websites and apps out there.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times-circle"></i> Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
+
 		<!-- END MAIN CONTENT -->
 		<div class="clearfix"></div>
+
 		<footer>
-			<p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+			<p class="copyright">&copy; 2020 <a href="https://ikelvin.co" target="_blank">ikelvin.co</a>. All Rights Reserved.</p>
 		</footer>
 	</div>
 	<!-- END WRAPPER -->
