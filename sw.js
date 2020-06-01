@@ -1,4 +1,4 @@
-const cacheName = 'EaseStudy-v1.0.2';
+const cacheName = 'EaseStudy-v1.0.6';
 
 const staticAssets = [
   './',
@@ -67,7 +67,7 @@ async function cacheFirst(request) {
 }
 
 async function networkFirst(request) {
-  const dynamicCache = await caches.open('EaseStudy-v0.3');
+  const dynamicCache = await caches.open('EaseStudy-v1.0.6');
   try {
     const networkResponse = await fetch(request);
     dynamicCache.put(request, networkResponse.clone());
