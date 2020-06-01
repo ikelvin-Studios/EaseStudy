@@ -1,12 +1,4 @@
-const cacheName = 'EaseStudy-v1.0.1';
-
-// const staticAssets = [
-//   './',
-//   './includes/app.js',
-//   './includes/styles.css',
-//   './includes/fallback.json',
-//   './includes/images/fetch-dog.jpg'
-// ];
+const cacheName = 'EaseStudy-v1.0.2';
 
 const staticAssets = [
   './',
