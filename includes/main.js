@@ -85,7 +85,8 @@ function renderHTML(data) {
   // var mainArea = getElementByID("main-area");
   var htmlString = '';
   var countNo = 1;
-  for(i = 0; i < data.length; i++){
+  var length = data.length;
+  for(i = 0; i < length; i++){
 
     var optionE = '';
     // if (!data[i].options.E) {
