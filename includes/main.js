@@ -6,6 +6,10 @@ var mode = "interactive";
 
 var subjectName = '';
 var subjectYear = '';
+var testDate = '';
+var quizDate = '';
+var fromTime = '';
+var toTime = '';
 
 $(document).ready(function(){
  // var main = $(this).attr("main-content");
@@ -61,7 +65,11 @@ function study(subject){
              $('#objectives-instructions').html(objectivesInstructions);
              fetchJSON('contents/'+subject+'/'+year+'-', 'obj.json');
              fetchJSON('contents/'+subject+'/'+year+'-', 'written.json');
-
+             testDate = new Date();
+             var realMonth = testDate.getMonth()+1;
+             quizDate = testDate.getFullYear()+'/'+realMonth+'/'+testDate.getDate();
+             fromTime =testDate.getHours()+':'+testDate.getMinutes();
+             // quizDate = new Date('yr');
 
         }
    });
@@ -145,7 +153,7 @@ function choose(choice, num){
       toastr['success']("Correct Choice");
     }
   } else {
-    objSet[findNum].mark = 1;
+    objSet[findNum].mark = 0;
     console.log("Wrong Choice: "+mode);
     if (mode != "focus") {
       console.log("Wrong Choice: "+mode);
@@ -267,10 +275,18 @@ function changeMode(newMode){
 
 function viewAssessment(){
     var score = 0;
-    var length = objSet.length;
     var mark = '';
+    var quizColumns = '';
+    var counter = 0;
+    var sheetHeading = '<h3 class="heading"><i class="fa fa-square"></i>'+subjectName+' '+subjectYear+'</h3><a href="#" class="right">Your choices and results are as follows.</a>';
+    $("#sheet-heading").html(sheetHeading);
+    var sheetBody = '';
+    testDate = new Date();
+    toTime =testDate.getHours()+':'+testDate.getMinutes();
+    var length = objSet.length;
     for (var i = 0; i < length; i++) {
       score += objSet[i].mark;
+      counter++;
       // objSet[i].num;
       // objSet[i].choice;
       // objSet[i].answer;
@@ -280,8 +296,34 @@ function viewAssessment(){
         mark = '<span class="text-danger">| Wrong Choice</span>';
       }
 
+      quizColumns += '<div class="col-md-6 col-sm-6"><h4><i class="fa fa-hashtag"></i>'+counter+'. '+objSet[i].choice+'  '+mark+'</h4></div>'
     }
-    console.log("Length: "+length);
+    var recordObject = {
+      "subjectName" : subjectName,
+      "subjectYear" : subjectYear,
+      "score" : score,
+      "total" : length,
+      "date" : quizDate,
+      "fromTime" : fromTime,
+      "toTime" : toTime
+    };
+    recordList.push(recordObject);
+    saveRecords();
 
+    sheetBody = '<h1 class="page-title text-primary"> <strong>Score:</strong> '+score+' out of <strong>'+length+'</strong></h1><div class="row">'+quizColumns+'</div><p><strong>Date:</strong>'+quizDate+' From: '+fromTime+' to '+toTime+'</p>';
+    // console.log("Length: "+length);
+
+    $("#sheet-body").html(sheetBody);
+    $("#assess-loader").show();
+    $("#assess-loader").fadeOut(3000);
+
+
+
+}
+
+function saveRecords(){
+  var newRecordList = JSON.stringify(recordList)
+  console.log(newRecordList);
+  setCookie("recordList", newRecordList, 1095);
 
 }
