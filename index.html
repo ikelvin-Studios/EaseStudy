@@ -54,23 +54,8 @@
 									<i class="lnr lnr-book"></i>
 									<span class="notification-dot"></span>
 								</a>
-								<ul class="dropdown-menu notifications">
-									<li class="header"><strong>You have <span id="assessment-count"> 0 </span> Assessment Records</strong></li>
-									<li>
-										<a href="#">
-											<div class="media">
-												<div class="media-left">
-													<i class="fa fa-fw fa-flag-checkered text-muted"></i>
-												</div>
-												<div class="media-body">
-													<p class="text"><strong><span>subject</span></strong> <span>Year on date&Time</span></p>
-													<span class="timestamp">Score: 0 out of 10</span>
-												</div>
-											</div>
-										</a>
-									</li>
+								<ul id="records-view" class="dropdown-menu notifications">
 
-									<li class="footer"><a onclick="resetRecords()" class="more">Clear Records</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -130,23 +115,11 @@
 				<nav id="left-sidebar-nav" class="sidebar-nav">
 					<ul id="main-menu" class="metismenu">
 						<li class=""><a href="./"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
-						<!-- <li class="">
-							<a href="#uiElements" class="has-arrow" aria-expanded="false"><i class="lnr lnr-book"></i> <span>Subjects</span></a>
-							<ul aria-expanded="true">
-								<li class=""><a href="#english">English</a></li>
-								<li class=""><a href="#maths">Mathematics</a></li>
-								<li class=""><a href="#science">Science</a></li>
-								<li class=""><a href="#social"><span>Social Studies</span></a></li>
-							</ul>
-						</li> -->
             <li class=""><a data-toggle="modal" data-target="#About-modal"><i class="lnr lnr-question-circle"></i> <span>About</span></a></li>
-
 					</ul>
 				</nav>
-				<div style="padding: 30px; text-align: center;">
-					<h2 style="font-size: 16px; margin-bottom: 15px; font-weight: 700;">Students Performance Stats</h2>
+				<div id="Side-Assesment" style="padding: 30px; text-align: center;">
 
-					<a href="" target="_blank" class="btn btn-primary">VIEW STATS</a>
 				</div>
 			</div>
 		</div>
