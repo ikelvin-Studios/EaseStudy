@@ -21,7 +21,7 @@ console.log("What is mode again: "+mode);
       method:"post",
       data:{action:upcount},
       success:function(data){
-           $('#main-content').html(data);
+           $('#main-contentArea').html(data);
       }
  });
 
@@ -31,9 +31,8 @@ function study(subject){
   var subject = subject;
   var yearID = subject+'-year';
   var year = $('#'+yearID).val();
-  var subjectName = subject;
-  var objectiveSide = '';
-  var writtenSide = '';
+  subjectName = subject;
+  subjectYear = year;
   var subjectNotice = "let's solve the awesome quiz below.";
   var objectivesInstructions = "Choose from the multi-choice options";
   var writtenInstructions = "Solve This At Your Own Pace";
@@ -57,7 +56,7 @@ function study(subject){
         method:"post",
         data:{action:subject},
         success:function(data){
-             $('#main-content').html(data);
+             $('#main-contentArea').html(data);
              $('#subject-header').html(subjectName+' - '+year);
              $('#objectives-instructions').html(objectivesInstructions);
              fetchJSON('contents/'+subject+'/'+year+'-', 'obj.json');
@@ -109,17 +108,18 @@ function renderHTML(data) {
     } else if(data[i].type == 'instructions'){
       htmlString += '<br/><p>'+data[i].note+'</p><br/>';
     } else if(data[i].type == 'essay'){
-        htmlString += '<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title">#'+countNo+'. '+data[i].problem+'</h4></div></div>';
+        htmlString += '<div class="panel panel-default"><div class="panel-body"><p class="panel-content">#'+countNo+'. '+data[i].problem+'</p></div></div>';
         countNo++;
     } else if(data[i].type == 'title'){
       htmlString += '<br/><center><h3><b>'+data[i].note+'<b></h3></center><br/>';
     }
 
 
+
   }
 
   // TODO: View AssessMent Button
-  htmlString += '<div class="margin-bottom-30"></div>';
+  htmlString += '<div class="margin-bottom-30"></div><button onclick="viewAssessment()" data-toggle="modal" data-target="#assessModal" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> VIEW ASSESSMENT</button>';
   // return htmlString;
   // console.log($('#main-area'));
   // TODO:  $('#main-area').appendTo(htmlString);
