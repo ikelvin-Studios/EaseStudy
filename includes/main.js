@@ -17,21 +17,15 @@ var writtenInstructions = "Solve This At Your Own Pace";
 
 $(document).ready(function(){
 
- // Show the Modal on load
-checkAccount();
-activateMode();
-console.log("What is mode again: "+mode);
- var upcount = 0;
+   // Show the Modal on load
+  checkAccount();
+  activateMode();
+  console.log("What is mode again: "+mode);
+   var upcount = 0;
 
- console.log("homepage is active");
- $.ajax({
-      url:"pages/home.html",
-      method:"post",
-      data:{action:upcount},
-      success:function(data){
-           $('#main-contentArea').html(data);
-      }
- });
+
+  $("#main-contentArea").load("pages/home.html");
+  console.log("homepage is active");
 
 });
 
@@ -57,28 +51,22 @@ function study(subject){
   // var subject = $(this).attr("subject");
   console.log(subject);
   console.log(year);
-   $.ajax({
-        url:"pages/quiz.html",
-        method:"post",
-        data:{action:subject},
-        success:function(data){
-             $('#main-contentArea').html(data);
-             $('#subject-header').html(subjectName+' - '+year);
-             $('#objectives-instructions').html(objectivesInstructions);
-             fetchJSON('contents/'+subject+'/'+year+'-', 'obj.json');
-             fetchJSON('contents/'+subject+'/'+year+'-', 'written.json');
-             testDate = new Date();
-             var realMonth = testDate.getMonth()+1;
-             quizDate = testDate.getFullYear()+'/'+realMonth+'/'+testDate.getDate();
-             fromTime = testDate.getHours()+':'+testDate.getMinutes();
 
-             var sideAssessmentView = '<h2 style="font-size: 16px; margin-bottom: 15px; font-weight: 700;">'+subjectName+' '+subjectYear+'</h2><a class="btn btn-primary" onclick="viewAssessment()" data-toggle="modal" data-target="#assessModal">VIEW ASSESSMENT</a>';
+ $('#main-contentArea').load("pages/quiz.html");
+ $('#subject-header').html(subjectName+' - '+year);
+ $('#objectives-instructions').html(objectivesInstructions);
+ fetchJSON('contents/'+subject+'/'+year+'-', 'obj.json');
+ fetchJSON('contents/'+subject+'/'+year+'-', 'written.json');
+ testDate = new Date();
+ var realMonth = testDate.getMonth()+1;
+ quizDate = testDate.getFullYear()+'/'+realMonth+'/'+testDate.getDate();
+ fromTime = testDate.getHours()+':'+testDate.getMinutes();
 
-           $("#Side-Assesment").html(sideAssessmentView);
-             // quizDate = new Date('yr');
+ var sideAssessmentView = '<h2 style="font-size: 16px; margin-bottom: 15px; font-weight: 700;">'+subjectName+' '+subjectYear+'</h2><a class="btn btn-primary" onclick="viewAssessment()" data-toggle="modal" data-target="#assessModal">VIEW ASSESSMENT</a>';
 
-        }
-   });
+$("#Side-Assesment").html(sideAssessmentView);
+ // quizDate = new Date('yr');
+
 };
 
 function fetchJSON(linkHead, file) {
