@@ -139,13 +139,149 @@ function choose(choice, num){
   // var quizObject = objSet[findNum];
   if (choice == objSet[findNum].answer) {
     objSet[findNum].mark = 1;
-    console.log("Correct Choice");
-    toastr['success']("Correct Choice");
-
+    console.log("Correct Choice: "+mode);
+    if (mode != "focus") {
+      console.log("Correct Choice: "+mode);
+      toastr['success']("Correct Choice");
+    }
   } else {
     objSet[findNum].mark = 1;
-    console.log("Wrong Choice");
-    toastr['error']("Wrong Choice");
+    console.log("Wrong Choice: "+mode);
+    if (mode != "focus") {
+      console.log("Wrong Choice: "+mode);
+      toastr['error']("Wrong Choice");
+    }
   }
   console.log("#"+num+" Answer Chosen: "+choice);
+}
+
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+// function checkCookie() {
+//   var user = getCookie("username");
+//   if (user != "") {
+//     alert("Welcome again " + user);
+//   } else {
+//     user = prompt("Please enter your name:", "");
+//     if (user != "" && user != null) {
+//       setCookie("username", user, 365);
+//     }
+//   }
+// }
+
+function checkAccount() {
+  studentName = getCookie("studentName");
+  if (studentName != "") {
+    getReady();
+  recordList = getCookie("recordList");
+    if (recordList != "") {
+      recordList = JSON.parse(getCookie("recordList"));
+      // recordListView(recordList);
+    } else {
+      recordList = [];
+    }
+  } else {
+      $("#startupModal").modal("show");
+  }
+}
+
+function registerAccount() {
+  // $("#startupModal").modal("dismiss");
+  var studentInput = $("#startupInput").val();
+  console.log("Input: "+studentInput);
+  if (studentInput != "" && studentInput != null) {
+    // setting cookie for 3 years
+    setCookie("studentName", studentInput, 1095);
+    checkAccount();
+  } else {
+      $("#startupModal").modal("show");
+  }
+}
+
+function resetAccount(){
+  setCookie("studentName", "", -1100);
+  setCookie("mode", "", -1100);
+  resetRecords();
+}
+
+function resetRecords(){
+  setCookie("recordList", "", -1100);
+  window.location.reload();
+}
+
+function getReady(){
+  $(".student-name").text(studentName);
+}
+
+function checkMode(){
+  var newMode = getCookie("mode");
+  if (newMode !="") {
+    mode = "focus";
+  } else {
+    mode = "interactive";
+  }
+  return mode;
+}
+
+function activateMode(){
+  console.log("Mode Activation Began");
+  mode = checkMode();
+  console.log("The Mode is:"+mode);
+  if (mode == "interactive") {
+    $(".focus-view").hide();
+  } else if (mode == "focus") {
+    $(".interactive-view").hide();
+  }
+}
+
+function changeMode(newMode){
+  var newMode = newMode;
+  if (newMode == "interactive") {
+    setCookie("mode", "", -1100);
+  } else if (newMode == "focus") {
+    setCookie("mode", "focus", 1095);
+  }
+  window.location.reload();
+}
+
+function viewAssessment(){
+    var score = 0;
+    var length = objSet.length;
+    var mark = '';
+    for (var i = 0; i < length; i++) {
+      score += objSet[i].mark;
+      // objSet[i].num;
+      // objSet[i].choice;
+      // objSet[i].answer;
+      if (objSet[i].mark > 0) {
+        mark = '<span class="text-primary">| Correct Choice</span>';
+      } else {
+        mark = '<span class="text-danger">| Wrong Choice</span>';
+      }
+
+    }
+    console.log("Length: "+length);
+
+
 }
