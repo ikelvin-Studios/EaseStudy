@@ -1,4 +1,4 @@
-const cacheName = 'EaseStudy-v1.0.6';
+const cacheName = 'EaseStudy-v1.1.1';
 
 const staticAssets = [
   './',
@@ -67,13 +67,13 @@ async function cacheFirst(request) {
 }
 
 async function networkFirst(request) {
-  const dynamicCache = await caches.open('EaseStudy-v1.0.6');
+  const dynamicCache = await caches.open('EaseStudy-v1.1.1');
   try {
     const networkResponse = await fetch(request);
     dynamicCache.put(request, networkResponse.clone());
     return networkResponse;
   } catch (err) {
     const cachedResponse = await dynamicCache.match(request);
-    return cachedResponse || await caches.match('./fallback.json');
+    return cachedResponse || await caches.match('./includes/images/lazyload.gif');
   }
 }
