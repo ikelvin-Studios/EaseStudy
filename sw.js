@@ -1,12 +1,10 @@
-const cacheName = 'EaseStudy-v1.1.1';
+const cacheName = 'EaseStudy-v1.2';
 
 const staticAssets = [
   './',
   './index.html',
   './includes/app.js',
   './includes/main.js',
-  './pages/home.html',
-  './pages/quiz.html',
   './static/assets/img/lazyload.gif',
   './static/assets/img/loader.gif',
   './static/assets/img/about.gif',
@@ -67,7 +65,7 @@ async function cacheFirst(request) {
 }
 
 async function networkFirst(request) {
-  const dynamicCache = await caches.open('EaseStudy-v1.1.1');
+  const dynamicCache = await caches.open('EaseStudy-v1.2');
   try {
     const networkResponse = await fetch(request);
     dynamicCache.put(request, networkResponse.clone());

@@ -103,9 +103,6 @@ function renderHTML(data) {
   for(i = 0; i < length; i++){
 
     var optionE = '';
-    // if (!data[i].options.E) {
-    //   optionE = '<br/><label><input type="radio" name="obj-q'+data[i].no+'" value="E">E. '+data[i].options.E+' </label>';
-    // }
     if (data[i].type == 'quiz') {
       var objObject = {
         "num" : countNo,
@@ -133,12 +130,9 @@ function renderHTML(data) {
 
   }
 
-  // TODO: View AssessMent Button
+  // View AssessMent Button
   htmlString += '<div class="margin-bottom-30"></div><button onclick="viewAssessment()" data-toggle="modal" data-target="#assessModal" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> VIEW ASSESSMENT</button>';
-  // return htmlString;
-  // console.log($('#main-area'));
-  // TODO:  $('#main-area').appendTo(htmlString);
-  // $('#main-area').html(htmlString);
+
 
   $(htmlString).appendTo('#main-area')
 }
